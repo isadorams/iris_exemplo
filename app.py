@@ -16,4 +16,14 @@ with open("objetos.pkl", "rb") as arquivo:
 
   estrutura = {'comp_sepala': comp_sepala, 'comp_petala': comp_petala}
   df = pd.DataFrame(estrutura, index=[0])
+  
+  st.write("### Parâmetros de Entrada")
   st.write(df)
+  
+  df = ss.transform(df)
+  st.write(df)
+  
+  predicao = dtc.predict(df)
+  st.write("**A classe dessa flor é:")
+  st.write(predicao)
+  
