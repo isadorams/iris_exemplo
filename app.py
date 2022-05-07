@@ -28,6 +28,13 @@ with open("objetos.pkl", "rb") as arquivo:
   #st.write("**A classe dessa flor é:**")
   #st.write(predicao)
   predicao = dtc.predict_proba(df)
+  predicao = pd.DataFrame(predicao)
+  predicao.rename({
+    0: "Iris-setosa",
+    1: "Iris-versicolor",
+    2: "Iris-virginica"
+  }, axis=1, inplace=True)
+  
   st.write("Probabilidades")
   st.write(predicao)
   
