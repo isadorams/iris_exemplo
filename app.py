@@ -1,6 +1,6 @@
 import streamlit as st
 import pickle
-from sklearn.preprecessing import StandardScaler
+from sklearn.preprocessing import StandardScaler
 from sklearn.tree import DecisionTreeClassifier
 
 st.write("# Classificação de Iris")
