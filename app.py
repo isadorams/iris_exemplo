@@ -24,7 +24,7 @@ with open("objetos.pkl", "rb") as arquivo:
   st.write(df)
   
   predicao = dtc.predict(df)
-  st.write(f"A classe dessa flor é:**"{predicao[0]})
+  st.write(f"A classe dessa flor é: **{predicao[0]}**")
   #st.write("**A classe dessa flor é:**")
   #st.write(predicao)
   predicao = dtc.predict_proba(df)
